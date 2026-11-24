@@ -1,0 +1,160 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="845" viewBox="0 0 960 845" role="img" aria-labelledby="title desc">
+  <title id="title">XCL translation progress</title>
+  <desc id="desc">1,042 of 1,157 RDNA2 instruction probes translated. Green squares pass the synthetic translation probe. Gray squares did not pass. Separate retail samples report 26,698 of 26,698 shader programs translated to HLSL and 909 of 912 exact texture decodes.</desc>
+  <defs>
+    <pattern id="covered" width="8" height="8" x="14" y="3" patternUnits="userSpaceOnUse"><rect width="6" height="6" rx="1" fill="#4ac878"/></pattern>
+    <pattern id="uncovered" width="8" height="8" x="14" y="3" patternUnits="userSpaceOnUse"><rect width="6" height="6" rx="1" fill="#516174"/></pattern>
+    <style>
+      text { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; fill: #eef4fa; }
+      .card { fill: #191f2b; stroke: #30394b; }
+      .metric { font-size: 26px; font-weight: 700; }
+      .label { fill: #bbc8d8; font-size: 16px; }
+      .card-label, .count { font-size: 17px; font-weight: 600; }
+      .count { fill: #b9c8d9; font-variant-numeric: tabular-nums; }
+    </style>
+  </defs>
+  <rect width="960" height="845" rx="12" fill="#10151f"/>
+  <text x="24" y="43" font-size="30" font-weight="700">XCL translation progress</text>
+  <text class="label" x="936" y="42" text-anchor="end">ISA snapshot · 9e3831e</text>
+  <g transform="translate(24 66)">
+    <rect class="card" width="296" height="83" rx="7"/>
+    <text class="metric" x="14" y="36">1,042 / 1,157</text>
+    <text class="label" x="14" y="62">RDNA2 probes translated · 90.1%</text>
+  </g>
+  <g transform="translate(332 66)">
+    <rect class="card" width="296" height="83" rx="7"/>
+    <text class="metric" x="14" y="36">26,698 / 26,698</text>
+    <text class="label" x="14" y="62">Retail shader programs → HLSL</text>
+  </g>
+  <g transform="translate(640 66)">
+    <rect class="card" width="296" height="83" rx="7"/>
+    <text class="metric" x="14" y="36">909 / 912</text>
+    <text class="label" x="14" y="62">Retail textures decoded exactly</text>
+  </g>
+  <text x="24" y="185" font-size="21" font-weight="650">RDNA2 instruction probes by encoding</text>
+  <rect x="580" y="173" width="12" height="12" rx="2" fill="#4ac878"/>
+  <text class="label" x="600" y="184">Translated</text>
+  <rect x="714" y="173" width="12" height="12" rx="2" fill="#516174"/>
+  <text class="label" x="734" y="184">Probe did not translate</text>
+  <g transform="translate(24 209)">
+    <rect class="card" width="296" height="133" rx="7"/>
+    <text class="card-label" x="14" y="30">VOP3</text>
+    <text class="count" x="282" y="30" text-anchor="end">287 / 298</text>
+    <g transform="translate(0 -10)"><rect x="14" y="51" width="256" height="72" fill="url(#uncovered)"/><rect x="14" y="123" width="80" height="8" fill="url(#uncovered)"/><rect x="14" y="51" width="256" height="64" fill="url(#covered)"/><rect x="14" y="115" width="248" height="8" fill="url(#covered)"/></g>
+  </g>
+  <g transform="translate(332 209)">
+    <rect class="card" width="296" height="133" rx="7"/>
+    <text class="card-label" x="14" y="30">MIMG</text>
+    <text class="count" x="282" y="30" text-anchor="end">105 / 130</text>
+    <g transform="translate(0 -10)"><rect x="14" y="51" width="256" height="32" fill="url(#uncovered)"/><rect x="14" y="83" width="16" height="8" fill="url(#uncovered)"/><rect x="14" y="51" width="256" height="24" fill="url(#covered)"/><rect x="14" y="75" width="72" height="8" fill="url(#covered)"/></g>
+  </g>
+  <g transform="translate(640 209)">
+    <rect class="card" width="296" height="133" rx="7"/>
+    <text class="card-label" x="14" y="30">DS</text>
+    <text class="count" x="282" y="30" text-anchor="end">74 / 123</text>
+    <g transform="translate(0 -10)"><rect x="14" y="51" width="256" height="24" fill="url(#uncovered)"/><rect x="14" y="75" width="216" height="8" fill="url(#uncovered)"/><rect x="14" y="51" width="256" height="16" fill="url(#covered)"/><rect x="14" y="67" width="80" height="8" fill="url(#covered)"/></g>
+  </g>
+  <g transform="translate(24 350)">
+    <rect class="card" width="296" height="77" rx="7"/>
+    <text class="card-label" x="14" y="30">VOP1</text>
+    <text class="count" x="282" y="30" text-anchor="end">74 / 81</text>
+    <g transform="translate(0 -10)"><rect x="14" y="51" width="256" height="16" fill="url(#uncovered)"/><rect x="14" y="67" width="136" height="8" fill="url(#uncovered)"/><rect x="14" y="51" width="256" height="16" fill="url(#covered)"/><rect x="14" y="67" width="80" height="8" fill="url(#covered)"/></g>
+  </g>
+  <g transform="translate(332 350)">
+    <rect class="card" width="296" height="77" rx="7"/>
+    <text class="card-label" x="14" y="30">MUBUF</text>
+    <text class="count" x="282" y="30" text-anchor="end">75 / 75</text>
+    <g transform="translate(0 -10)"><rect x="14" y="51" width="256" height="16" fill="url(#uncovered)"/><rect x="14" y="67" width="88" height="8" fill="url(#uncovered)"/><rect x="14" y="51" width="256" height="16" fill="url(#covered)"/><rect x="14" y="67" width="88" height="8" fill="url(#covered)"/></g>
+  </g>
+  <g transform="translate(640 350)">
+    <rect class="card" width="296" height="77" rx="7"/>
+    <text class="card-label" x="14" y="30">SOP1</text>
+    <text class="count" x="282" y="30" text-anchor="end">60 / 65</text>
+    <g transform="translate(0 -10)"><rect x="14" y="51" width="256" height="16" fill="url(#uncovered)"/><rect x="14" y="67" width="8" height="8" fill="url(#uncovered)"/><rect x="14" y="51" width="256" height="8" fill="url(#covered)"/><rect x="14" y="59" width="224" height="8" fill="url(#covered)"/></g>
+  </g>
+  <g transform="translate(24 435)">
+    <rect class="card" width="296" height="69" rx="7"/>
+    <text class="card-label" x="14" y="30">FLAT_GLBL</text>
+    <text class="count" x="282" y="30" text-anchor="end">57 / 57</text>
+    <g transform="translate(0 -10)"><rect x="14" y="51" width="256" height="8" fill="url(#uncovered)"/><rect x="14" y="59" width="200" height="8" fill="url(#uncovered)"/><rect x="14" y="51" width="256" height="8" fill="url(#covered)"/><rect x="14" y="59" width="200" height="8" fill="url(#covered)"/></g>
+  </g>
+  <g transform="translate(332 435)">
+    <rect class="card" width="296" height="69" rx="7"/>
+    <text class="card-label" x="14" y="30">FLAT</text>
+    <text class="count" x="282" y="30" text-anchor="end">54 / 54</text>
+    <g transform="translate(0 -10)"><rect x="14" y="51" width="256" height="8" fill="url(#uncovered)"/><rect x="14" y="59" width="176" height="8" fill="url(#uncovered)"/><rect x="14" y="51" width="256" height="8" fill="url(#covered)"/><rect x="14" y="59" width="176" height="8" fill="url(#covered)"/></g>
+  </g>
+  <g transform="translate(640 435)">
+    <rect class="card" width="296" height="69" rx="7"/>
+    <text class="card-label" x="14" y="30">SOP2</text>
+    <text class="count" x="282" y="30" text-anchor="end">51 / 51</text>
+    <g transform="translate(0 -10)"><rect x="14" y="51" width="256" height="8" fill="url(#uncovered)"/><rect x="14" y="59" width="152" height="8" fill="url(#uncovered)"/><rect x="14" y="51" width="256" height="8" fill="url(#covered)"/><rect x="14" y="59" width="152" height="8" fill="url(#covered)"/></g>
+  </g>
+  <g transform="translate(24 512)">
+    <rect class="card" width="296" height="69" rx="7"/>
+    <text class="card-label" x="14" y="30">VOP2</text>
+    <text class="count" x="282" y="30" text-anchor="end">50 / 50</text>
+    <g transform="translate(0 -10)"><rect x="14" y="51" width="256" height="8" fill="url(#uncovered)"/><rect x="14" y="59" width="144" height="8" fill="url(#uncovered)"/><rect x="14" y="51" width="256" height="8" fill="url(#covered)"/><rect x="14" y="59" width="144" height="8" fill="url(#covered)"/></g>
+  </g>
+  <g transform="translate(332 512)">
+    <rect class="card" width="296" height="69" rx="7"/>
+    <text class="card-label" x="14" y="30">SOPP</text>
+    <text class="count" x="282" y="30" text-anchor="end">26 / 36</text>
+    <g transform="translate(0 -10)"><rect x="14" y="51" width="256" height="8" fill="url(#uncovered)"/><rect x="14" y="59" width="32" height="8" fill="url(#uncovered)"/><rect x="14" y="51" width="208" height="8" fill="url(#covered)"/></g>
+  </g>
+  <g transform="translate(640 512)">
+    <rect class="card" width="296" height="69" rx="7"/>
+    <text class="card-label" x="14" y="30">VOP3P</text>
+    <text class="count" x="282" y="30" text-anchor="end">29 / 29</text>
+    <g transform="translate(0 -10)"><rect x="14" y="51" width="232" height="8" fill="url(#uncovered)"/><rect x="14" y="51" width="232" height="8" fill="url(#covered)"/></g>
+  </g>
+  <g transform="translate(24 589)">
+    <rect class="card" width="296" height="61" rx="7"/>
+    <text class="card-label" x="14" y="30">SOPK</text>
+    <text class="count" x="282" y="30" text-anchor="end">23 / 27</text>
+    <g transform="translate(0 -10)"><rect x="14" y="51" width="216" height="8" fill="url(#uncovered)"/><rect x="14" y="51" width="184" height="8" fill="url(#covered)"/></g>
+  </g>
+  <g transform="translate(332 589)">
+    <rect class="card" width="296" height="61" rx="7"/>
+    <text class="card-label" x="14" y="30">FLAT_SCRATCH</text>
+    <text class="count" x="282" y="30" text-anchor="end">22 / 22</text>
+    <g transform="translate(0 -10)"><rect x="14" y="51" width="176" height="8" fill="url(#uncovered)"/><rect x="14" y="51" width="176" height="8" fill="url(#covered)"/></g>
+  </g>
+  <g transform="translate(640 589)">
+    <rect class="card" width="296" height="61" rx="7"/>
+    <text class="card-label" x="14" y="30">SOPC</text>
+    <text class="count" x="282" y="30" text-anchor="end">18 / 18</text>
+    <g transform="translate(0 -10)"><rect x="14" y="51" width="144" height="8" fill="url(#uncovered)"/><rect x="14" y="51" width="144" height="8" fill="url(#covered)"/></g>
+  </g>
+  <g transform="translate(24 658)">
+    <rect class="card" width="296" height="61" rx="7"/>
+    <text class="card-label" x="14" y="30">MTBUF</text>
+    <text class="count" x="282" y="30" text-anchor="end">16 / 16</text>
+    <g transform="translate(0 -10)"><rect x="14" y="51" width="128" height="8" fill="url(#uncovered)"/><rect x="14" y="51" width="128" height="8" fill="url(#covered)"/></g>
+  </g>
+  <g transform="translate(332 658)">
+    <rect class="card" width="296" height="61" rx="7"/>
+    <text class="card-label" x="14" y="30">SMEM</text>
+    <text class="count" x="282" y="30" text-anchor="end">14 / 14</text>
+    <g transform="translate(0 -10)"><rect x="14" y="51" width="112" height="8" fill="url(#uncovered)"/><rect x="14" y="51" width="112" height="8" fill="url(#covered)"/></g>
+  </g>
+  <g transform="translate(640 658)">
+    <rect class="card" width="296" height="61" rx="7"/>
+    <text class="card-label" x="14" y="30">VOP3_SDST_ENC</text>
+    <text class="count" x="282" y="30" text-anchor="end">6 / 7</text>
+    <g transform="translate(0 -10)"><rect x="14" y="51" width="56" height="8" fill="url(#uncovered)"/><rect x="14" y="51" width="48" height="8" fill="url(#covered)"/></g>
+  </g>
+  <g transform="translate(24 727)">
+    <rect class="card" width="296" height="61" rx="7"/>
+    <text class="card-label" x="14" y="30">VINTRP</text>
+    <text class="count" x="282" y="30" text-anchor="end">0 / 3</text>
+    <g transform="translate(0 -10)"><rect x="14" y="51" width="24" height="8" fill="url(#uncovered)"/></g>
+  </g>
+  <g transform="translate(332 727)">
+    <rect class="card" width="296" height="61" rx="7"/>
+    <text class="card-label" x="14" y="30">EXP</text>
+    <text class="count" x="282" y="30" text-anchor="end">1 / 1</text>
+    <g transform="translate(0 -10)"><rect x="14" y="51" width="8" height="8" fill="url(#uncovered)"/><rect x="14" y="51" width="8" height="8" fill="url(#covered)"/></g>
+  </g>
+  <text class="label" x="24" y="821">One square per instruction probe · see the README for scope and sources.</text>
+</svg>

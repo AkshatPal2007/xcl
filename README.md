@@ -17,6 +17,14 @@ XCL works only on unpacked game files you already own. It does not download, dec
 | **XDefiant** | `Ubisoft.XDefiant-Game` 1.0.0.186 | ✅ | works fully, as far as the game allows without its servers | the game's own servers have been shut down |
 | **A newer retail game** | – | 🚧 | starts in ~4 s, runs at a steady 30 fps without a crash, shows its menus and goes on past the first one to its settings; fits a 32 GB machine (~15 GB committed in the menus) | gameplay not reached yet; its minimap mesh pipelines are refused |
 
+## Translation progress
+
+![XCL translation progress. 1,042 of 1,157 RDNA2 instruction probes translated, grouped by encoding.](docs/translation-progress.svg)
+
+The instruction grid shows the `isa_coverage` census at `9e3831e`. Each square represents a translation probe of an instruction's first primary encoding with synthetic operands. The retail shader and texture counts come from the samples described in [Highlights](#highlights). The [Games](#games) table tracks playability.
+
+Run `cargo test --locked -p xcl --lib isa_coverage -- --ignored --nocapture --test-threads=1` to refresh the instruction counts.
+
 ## Highlights
 
 - **100 % of a retail game's shaders translate** – all 26 698 RDNA2 programs (26 503 records) of its shader pack
