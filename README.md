@@ -19,11 +19,20 @@ XCL works only on unpacked game files you already own. It does not download, dec
 
 ## Translation progress
 
-![XCL translation progress. 1,042 of 1,157 RDNA2 instruction probes translated, grouped by encoding.](docs/translation-progress.svg)
+[![XCL translation progress by GDK class, import DLL, RDNA2 encoding, and retail shader stage.](docs/translation-progress.svg)](docs/translation-progress.svg)
 
-The instruction grid shows the `isa_coverage` census at `9e3831e`. Each square represents a translation probe of an instruction's first primary encoding with synthetic operands. The retail shader and texture counts come from the samples described in [Highlights](#highlights). The [Games](#games) table tracks playability.
+| Measurement | Result | Scope |
+|---|---:|---|
+| CPU x86-64 | Native | Windows runs the game's x64 code directly. |
+| GDK runtime API map | 396 functions in 24 classes | Entries in the [GDK thunk table](crates/xcl/src/hle/xgameruntime/gdk_table.rs). Gray marks the Store, App Broadcast and App Capture classes, which XCL explicitly declines offline. |
+| Package import routing | 241 / 242 | `xcl inspect --json` on `xcl_testtitle.exe` and `testgame_mw.dll`. The fixture deliberately imports one missing function. |
+| Console DLL loading | 16 / 16 | The documented retail sample passed mapping, TLS and DLL initialization. [Console DLL results](HANDOFF.md#console-dlls-from-the-game-pack-session-5-without-the-exe) |
+| RDNA2 disassembly | 23,405 / 23,405 | `llvm_gfx10_corpus` matched LLVM's mnemonics and lengths after excluding 407 RDNA1 cases. |
+| RDNA2 recompilation | 1,042 / 1,157 (90.1%) | `isa_coverage` uses synthetic operands for instructions that assemble in their first primary encoding. |
+| Retail shader translation | 26,698 / 26,698 | HLSL translation across six stages in one retail shader pack. [Retail shader results](HANDOFF.md) |
+| Retail texture decoding | 909 / 912 byte-exact | One retail texture archive. The remaining three samples are volume LUTs. [Retail texture results](#highlights) |
 
-Run `cargo test --locked -p xcl --lib isa_coverage -- --ignored --nocapture --test-threads=1` to refresh the instruction counts.
+The source-based measurements use `9e3831e`. The [Games](#games) table tracks playability. Reproduce the ISA counts with `cargo test --locked -p xcl --lib isa_coverage -- --ignored --nocapture --test-threads=1`.
 
 ## Highlights
 
